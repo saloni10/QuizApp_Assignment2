@@ -21,15 +21,14 @@ import java.util.Random;
 public class QuizActivity extends AppCompatActivity {
 
 
+    private static final String KEY_TEXT_VALUE = "text";
     Random r = new Random();
-    int num = r.nextInt(1000)+1;
+    int num = r.nextInt(1000) + 1;
 
     @Override
     public View findViewById(@IdRes int id) {
         return super.findViewById(id);
     }
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,69 +37,76 @@ public class QuizActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView question = (TextView) findViewById(R.id.question_text_view);
-        question.setText("Is "+ num + " a Prime Number ?");
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        if (savedInstanceState != null) {
+            CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
+            question.setText(savedText);
+        } else {
+            question.setText("Is " + num + " a Prime Number ?");
+        }
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+            //public void onClick(View view) {
+               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                       // .setAction("Action", null).show();
+           // }
+       // });
     }
-    public void next(View view)
-    {
+
+    public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
-        num=r.nextInt(1000)+1;
-        question.setText("Is "+ num + " a Prime Number ?");
+        num = r.nextInt(1000) + 1;
+        question.setText("Is " + num + " a Prime Number ?");
     }
 
-    public void yes(View view){
-        checktrue(num);}
+    public void yes(View view) {
+        checktrue(num);
+    }
 
-    public void no(View view)
-    {
+    public void no(View view) {
 
         checkfalse(num);
     }
 
-   public void checktrue(int n){
+    public void checktrue(int n) {
 
-        if(n==1)
-            Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-        else{
-            int flag=1;
-        for(int i=2;i<n/2;i++)
-        {
-            if(n%i==0)
-            { flag=0;
-            break;}
-        }
-        if(flag==1)
-            Toast.makeText(getApplicationContext(),"Correct",Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(getApplicationContext(),"InCorrect",Toast.LENGTH_SHORT).show();
-
-    }}
-    public void checkfalse(int n){
-
-        if(n==1)
-            Toast.makeText(getApplicationContext(),"Correct",Toast.LENGTH_SHORT).show();
-        else{
-            int flag=1;
-            for(int i=2;i<n/2;i++)
-            {
-                if(n%i==0)
-                { flag=0;
-                    break;}
+        if (n == 1)
+            Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+        else {
+            int flag = 1;
+            for (int i = 2; i < n / 2; i++) {
+                if (n % i == 0) {
+                    flag = 0;
+                    break;
+                }
             }
-            if(flag==1)
-                Toast.makeText(getApplicationContext(),"InCorrect",Toast.LENGTH_SHORT).show();
+            if (flag == 1)
+                Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
             else
-                Toast.makeText(getApplicationContext(),"Correct",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "InCorrect", Toast.LENGTH_SHORT).show();
 
-        }}
+        }
+    }
 
+    public void checkfalse(int n) {
+
+        if (n == 1)
+            Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
+        else {
+            int flag = 1;
+            for (int i = 2; i < n / 2; i++) {
+                if (n % i == 0) {
+                    flag = 0;
+                    break;
+                }
+            }
+            if (flag == 1)
+                Toast.makeText(getApplicationContext(), "InCorrect", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
+
+        }
+    }
 
 
     @Override
@@ -108,6 +114,14 @@ public class QuizActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_quiz, menu);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        TextView question = (TextView) findViewById(R.id.question_text_view);
+        outState.putCharSequence(KEY_TEXT_VALUE, question.getText());
+
     }
 
     @Override
