@@ -23,7 +23,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private static final String KEY_TEXT_VALUE = "text";
     Random r = new Random();
-    int num = r.nextInt(1000) + 1;
+    int num = r.nextInt(1000) + 1; //generating Random number
 
     @Override
     public View findViewById(@IdRes int id) {
@@ -37,37 +37,34 @@ public class QuizActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView question = (TextView) findViewById(R.id.question_text_view);
+        //Saving state on orientation change
         if (savedInstanceState != null) {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             question.setText(savedText);
         } else {
-            question.setText("Is " + num + " a Prime Number ?");
+            question.setText(R.string.is + num + R.string.prime);
         }
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-            //public void onClick(View view) {
-               // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                       // .setAction("Action", null).show();
-           // }
-       // });
+
     }
 
+    //Function called for Next Button
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
         num = r.nextInt(1000) + 1;
-        question.setText("Is " + num + " a Prime Number ?");
+        question.setText(R.string.is + num + R.string.prime);
     }
 
+    //Function called for Yes Button
     public void yes(View view) {
         checktrue(num);
     }
 
+    //Function called for No Button
     public void no(View view) {
-
         checkfalse(num);
     }
 
+    //checking for prime number when Yes is clicked
     public void checktrue(int n) {
 
         if (n == 1)
@@ -83,11 +80,12 @@ public class QuizActivity extends AppCompatActivity {
             if (flag == 1)
                 Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
             else
-                Toast.makeText(getApplicationContext(), "InCorrect", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
 
         }
     }
 
+    //checking for prime number when No is clicked
     public void checkfalse(int n) {
 
         if (n == 1)
@@ -101,7 +99,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
             if (flag == 1)
-                Toast.makeText(getApplicationContext(), "InCorrect", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
 

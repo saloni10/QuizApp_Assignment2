@@ -2,4 +2,9 @@
     <string name="app_name">Quiz</string>
     <string name="action_settings">Settings</string>
     <string name="title">The Quiz App</string>
+    <string name="noButton">NO</string>
+    <string name="yesButton">YES</string>
+    <string name="nextButton">NEXT</string>
+    <string name="prime">a Prime number?</string>
+    <string name="is">Is</string>
 </resources>

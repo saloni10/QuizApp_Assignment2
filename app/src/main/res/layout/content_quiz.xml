@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="The Quiz App"
+        android:text="@string/title"
         android:textAllCaps="true"
         android:textSize="24dp"
         android:textStyle="bold" />
@@ -45,7 +45,7 @@
         android:layout_marginTop="40dp"
         android:background="#3F51B5"
         android:onClick="yes"
-        android:text="YES"
+        android:text="@string/yesButton"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
         android:layout_toRightOf="@+id/yes"
         android:background="#3F51B5"
         android:onClick="no"
-        android:text="NO"
+        android:text="@string/noButton"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
@@ -72,7 +72,7 @@
         android:layout_marginTop="40dp"
         android:background="#3F51B5"
         android:onClick="next"
-        android:text="Next"
+        android:text="@string/nextButton"
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
