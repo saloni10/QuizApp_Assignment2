@@ -42,7 +42,7 @@ public class QuizActivity extends AppCompatActivity {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             question.setText(savedText);
         } else {
-            question.setText("Is " + num + " a prime number");
+            question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
         }
 
     }
@@ -51,7 +51,7 @@ public class QuizActivity extends AppCompatActivity {
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
         num = r.nextInt(1000) + 1;
-        question.setText("Is " + num + " a prime number");
+        question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
     }
 
     //Function called for Yes Button
