@@ -21,20 +21,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="@string/title"
         android:textAllCaps="true"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
 
     <TextView
         android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+        android:layout_marginTop="104dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
 
     <LinearLayout
         android:id="@+id/linear"
@@ -46,7 +48,8 @@
             android:id="@+id/yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="205dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="200dp"
             android:layout_marginTop="160dp"
             android:background="#3F51B5"
             android:onClick="yes"
@@ -58,10 +61,9 @@
             android:id="@+id/no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
             android:layout_marginTop="160dp"
-            android:layout_toRightOf="@+id/yes"
             android:background="#3F51B5"
             android:onClick="no"
             android:text="@string/noButton"

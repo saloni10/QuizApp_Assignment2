@@ -24,17 +24,19 @@
         android:layout_marginTop="40dp"
         android:text="@string/title"
         android:textAllCaps="true"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
 
     <TextView
         android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:textSize="16dp"
-        android:textStyle="bold" />
+        android:layout_marginTop="152dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
 
     <Button
         android:id="@+id/yes"
