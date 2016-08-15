@@ -23,7 +23,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private static final String KEY_TEXT_VALUE = "text";
     Random r = new Random();
-    int num = r.nextInt(1000) + 1; //generating Random number
+    int num;//generating Random number
 
     @Override
     public View findViewById(@IdRes int id) {
@@ -41,7 +41,9 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             question.setText(savedText);
+            num= savedInstanceState.getInt("number");
         } else {
+            num = r.nextInt(1000) + 1;
             question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
         }
 
@@ -50,6 +52,7 @@ public class QuizActivity extends AppCompatActivity {
     //Function called for Next Button
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
+        num = r.nextInt(1000) + 1;
         question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
     }
 
@@ -76,6 +79,7 @@ public class QuizActivity extends AppCompatActivity {
                     break;
                 }
             }
+
             if (flag == 1)
                 Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
             else
@@ -118,6 +122,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         TextView question = (TextView) findViewById(R.id.question_text_view);
         outState.putCharSequence(KEY_TEXT_VALUE, question.getText());
+        outState.putInt("number",num);
 
     }
 
