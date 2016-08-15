@@ -41,10 +41,10 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             question.setText(savedText);
-            num= savedInstanceState.getInt("number");
+            num = savedInstanceState.getInt("number");
         } else {
             num = r.nextInt(1000) + 1;
-            question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
+            question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
         }
 
     }
@@ -53,7 +53,7 @@ public class QuizActivity extends AppCompatActivity {
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
         num = r.nextInt(1000) + 1;
-        question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
+        question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
     }
 
     //Function called for Yes Button
@@ -73,7 +73,7 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
         else {
             int flag = 1;
-            for (int i = 2; i <= n/2; i++) {
+            for (int i = 2; i <= n / 2; i++) {
                 if (n % i == 0) {
                     flag = 0;
                     break;
@@ -95,7 +95,7 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
         else {
             int flag = 1;
-            for (int i = 2; i <=n/2; i++) {
+            for (int i = 2; i <= n / 2; i++) {
                 if (n % i == 0) {
                     flag = 0;
                     break;
@@ -122,7 +122,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         TextView question = (TextView) findViewById(R.id.question_text_view);
         outState.putCharSequence(KEY_TEXT_VALUE, question.getText());
-        outState.putInt("number",num);
+        outState.putInt("number", num);
 
     }
 
