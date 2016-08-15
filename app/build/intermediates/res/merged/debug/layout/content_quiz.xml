@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
         android:text="@string/title"
         android:textAllCaps="true"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/question_text_view"
@@ -34,9 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="152dp"
+        android:fontFamily="sans-serif"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/yes"

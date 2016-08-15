@@ -42,7 +42,7 @@ public class QuizActivity extends AppCompatActivity {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             question.setText(savedText);
         } else {
-            question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
+            question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
         }
 
     }
@@ -50,8 +50,7 @@ public class QuizActivity extends AppCompatActivity {
     //Function called for Next Button
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
-        num = r.nextInt(1000) + 1;
-        question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
+        question.setText(getString(R.string.is) +" "+num + " " + getString(R.string.prime));
     }
 
     //Function called for Yes Button
@@ -71,14 +70,14 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
         else {
             int flag = 1;
-            for (int i = 2; i < n / 2; i++) {
+            for (int i = 2; i <= n/2; i++) {
                 if (n % i == 0) {
                     flag = 0;
                     break;
                 }
             }
             if (flag == 1)
-                Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();//generating toast
+                Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
 
@@ -92,7 +91,7 @@ public class QuizActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Correct", Toast.LENGTH_SHORT).show();
         else {
             int flag = 1;
-            for (int i = 2; i < n / 2; i++) {
+            for (int i = 2; i <=n/2; i++) {
                 if (n % i == 0) {
                     flag = 0;
                     break;
