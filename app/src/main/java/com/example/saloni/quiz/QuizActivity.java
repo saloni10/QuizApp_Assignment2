@@ -23,7 +23,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private static final String KEY_TEXT_VALUE = "text";
     Random r = new Random();
-    int num;//generating Random number
+    int num;
 
     @Override
     public View findViewById(@IdRes int id) {
@@ -49,24 +49,39 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    //Function called for Next Button
+
+    /*
+         *Function Called On Clicking Next Button
+         * Generates new question
+         * Generates new random number
+     */
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
         num = r.nextInt(1000) + 1;
         question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
     }
 
-    //Function called for Yes Button
+
+    /*
+       *Function Called on Clicking Yes Button
+     */
     public void yes(View view) {
         checktrue(num);
     }
 
-    //Function called for No Button
+
+    /*
+      *Function Called on Clicking No Button
+    */
     public void no(View view) {
         checkfalse(num);
     }
 
-    //checking for prime number when Yes is clicked
+
+    /*
+      *Checks if number is prime on click of Yes Button
+      * Displays appropriate Toast
+     */
     public void checktrue(int n) {
 
         if (n == 1)
@@ -88,7 +103,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    //checking for prime number when No is clicked
+    /*
+     *Checks if number is prime on click of No Button
+     * Displays appropriate Toast
+    */
     public void checkfalse(int n) {
 
         if (n == 1)
@@ -109,14 +127,9 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_quiz, menu);
-        return true;
-    }
-
+    /*
+      * Saves State on orientation change
+     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -126,18 +139,4 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
