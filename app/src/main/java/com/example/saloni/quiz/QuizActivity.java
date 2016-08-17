@@ -50,10 +50,10 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
-    /*
-         *Function Called On Clicking Next Button
-         * Generates new question
-         * Generates new random number
+    /**
+     * Function Called On Clicking Next Button
+     * Generates new question
+     * Generates new random number
      */
     public void next(View view) {
         TextView question = (TextView) findViewById(R.id.question_text_view);
@@ -70,17 +70,17 @@ public class QuizActivity extends AppCompatActivity {
     }
 
 
-    /*
-      *Function Called on Clicking No Button
-    */
+    /**
+     * Function Called on Clicking No Button
+     */
     public void no(View view) {
         checkfalse(num);
     }
 
 
-    /*
-      *Checks if number is prime on click of Yes Button
-      * Displays appropriate Toast
+    /**
+     * Checks if number is prime on click of Yes Button
+     * Displays appropriate Toast
      */
     public void checktrue(int n) {
 
@@ -103,10 +103,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    /*
-     *Checks if number is prime on click of No Button
+    /**
+     * Checks if number is prime on click of No Button
      * Displays appropriate Toast
-    */
+     */
     public void checkfalse(int n) {
 
         if (n == 1)
@@ -127,8 +127,8 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    /*
-      * Saves State on orientation change
+    /**
+     * Saves State on orientation change
      */
     @Override
     protected void onSaveInstanceState(Bundle outState) {

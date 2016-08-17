@@ -26,7 +26,8 @@
         android:text="@string/title"
         android:textAllCaps="true"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/question_text_view"
@@ -42,6 +43,7 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
         <Button
@@ -51,7 +53,7 @@
             android:layout_marginLeft="200dp"
             android:layout_marginStart="200dp"
             android:layout_marginTop="160dp"
-            android:background="#3F51B5"
+            android:background="@android:color/holo_green_dark"
             android:onClick="yes"
             android:text="@string/yesButton"
             android:textColor="@android:color/white"
@@ -64,7 +66,7 @@
             android:layout_marginLeft="48dp"
             android:layout_marginStart="48dp"
             android:layout_marginTop="160dp"
-            android:background="#3F51B5"
+            android:background="@android:color/holo_red_dark"
             android:onClick="no"
             android:text="@string/noButton"
             android:textColor="@android:color/white"

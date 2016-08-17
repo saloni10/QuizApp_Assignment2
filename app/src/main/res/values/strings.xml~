@@ -5,7 +5,7 @@
     <string name="noButton">NO</string>
     <string name="yesButton">YES</string>
     <string name="nextButton">NEXT</string>
-    <string name="is">Is</string>
     <string name="prime">a Prime number?</string>
-    
+    <string name="is">Is</string>
+    <string name="empty"></string>
 </resources>
