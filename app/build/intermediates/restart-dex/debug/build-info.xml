@@ -4,23 +4,27 @@
     api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="347091369661"
+    timestamp="240868579768"
     token="-6221377136761015458" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2198" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="242" />
     <task
         name="verifier"
-        duration="0" />
+        duration="189" />
 
-    <build timestamp="16008611236954" >
+    <artifact
+        location="/home/saloni/AndroidStudioProjects/Quiz/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="6225969514178" >
         <artifact
             location="/home/saloni/AndroidStudioProjects/Quiz/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

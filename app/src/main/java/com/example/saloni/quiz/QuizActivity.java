@@ -22,6 +22,10 @@ public class QuizActivity extends AppCompatActivity {
 
 
     private static final String KEY_TEXT_VALUE = "text";
+    public Button myesButton;
+    public Button mnoButton;
+    public Button mnextButton;
+    public TextView question;
     Random r = new Random();
     int num;
 
@@ -36,7 +40,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        TextView question = (TextView) findViewById(R.id.question_text_view);
+        final TextView question = (TextView) findViewById(R.id.question_text_view);
         //Saving state on orientation change
         if (savedInstanceState != null) {
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
@@ -46,6 +50,39 @@ public class QuizActivity extends AppCompatActivity {
             num = r.nextInt(1000) + 1;
             question.setText(getString(R.string.is) + " " + num + " " + getString(R.string.prime));
         }
+
+        /*
+         Listener for No button
+         */
+        mnoButton = (Button) findViewById(R.id.no);
+        mnoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                no(question);
+            }
+        });
+
+        /*
+         Listener for Yes button
+         */
+        myesButton = (Button) findViewById(R.id.yes);
+        myesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                yes(question);
+            }
+        });
+
+        /*
+         Listener for Next button
+         */
+        mnextButton = (Button) findViewById(R.id.next);
+        mnextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                next(question);
+            }
+        });
 
     }
 
