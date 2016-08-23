@@ -45,7 +45,7 @@ public class HintActivity extends AppCompatActivity {
                break;}
        }
         if(flag==0)
-     mhint_text.setText("Check for divisibility of " +num + " by "+ i);
+     mhint_text.setText("Check for divisibility of " + num + " by "+ i);
         else
             mhint_text.setText("No factors of " + num+" exist");
 
