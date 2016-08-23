@@ -299,10 +299,14 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="cheatButton">Cheat</string>
+    <string name="hintButton">Hint</string>
     <string name="is">Is</string>
     <string name="nextButton">NEXT</string>
     <string name="noButton">NO</string>
     <string name="prime">a Prime number?</string>
+    <string name="showCheatButton">Show Answer</string>
+    <string name="showHintButton">Show Hint</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title">The Quiz App</string>
     <string name="yesButton">YES</string>

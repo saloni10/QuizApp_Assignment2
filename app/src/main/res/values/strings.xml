@@ -5,7 +5,11 @@
     <string name="noButton">NO</string>
     <string name="yesButton">YES</string>
     <string name="nextButton">NEXT</string>
+    <string name="hintButton">Hint</string>
+    <string name="cheatButton">Cheat</string>
+    <string name="showHintButton">Show Hint</string>
+    <string name="showCheatButton">Show Answer</string>
     <string name="is">Is</string>
     <string name="prime">a Prime number?</string>
-    
+
 </resources>

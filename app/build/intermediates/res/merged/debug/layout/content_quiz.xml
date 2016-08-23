@@ -69,4 +69,26 @@
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#3F51B5"
+        android:onClick="hint"
+        android:text="@string/hintButton"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#3F51B5"
+        android:onClick="cheat"
+        android:text="@string/cheatButton"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
 </LinearLayout>

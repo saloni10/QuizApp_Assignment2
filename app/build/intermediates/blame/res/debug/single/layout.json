@@ -72,6 +72,10 @@
         "source": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/res/merged/debug/layout/activity_hint.xml",
+        "source": "/home/saloni/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_hint.xml"
+    },
+    {
         "merged": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/notification_template_part_chronometer.xml"
     },
@@ -130,6 +134,10 @@
     {
         "merged": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/res/merged/debug/layout/activity_cheat.xml",
+        "source": "/home/saloni/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_cheat.xml"
     },
     {
         "merged": "/home/saloni/AndroidStudioProjects/Quiz/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
